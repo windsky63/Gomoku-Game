@@ -13,11 +13,9 @@
 
 ### 后端 (Django)
 - **Django 4.x**: 高级Python Web框架，用于构建后端API
-- **Django REST Framework**: 构建RESTful API的强大工具
 
 ### 核心算法
 - **蒙特卡洛树搜索(MCTS)**: 用于AI决策的核心算法
-- **启发式评估函数**: 结合五子棋规则的评估函数，优化MCTS性能
 
 ## AI行动策略展示
 
@@ -25,10 +23,13 @@
 ![image](https://github.com/user-attachments/assets/6abca761-85ac-47d7-8a12-11ad065e216b)
 ![image](https://github.com/user-attachments/assets/92be02cc-8eb0-4ecc-b2c7-b16fc9d40e04)
 
+（白棋为AI的落子，黑棋为玩家落子。）
+
 ### 复杂状态
 ![image](https://github.com/user-attachments/assets/deaa7ebf-6cba-4faa-a059-acca1916ae97)
 ![image](https://github.com/user-attachments/assets/d4eaf36a-e8a4-4589-91bf-178f49f63908)
 
+（白棋为AI的落子，黑棋为玩家落子。）
 
 ## 功能特点
 
@@ -58,4 +59,3 @@
 - **规则模拟**: 传统的MCTS算法在模拟阶段进行随机模拟可能生成大量无意义的棋局（双方无威胁地随机落子），而规则模拟会优先生成有威胁的棋局，更快接近胜负结果。规则模拟能更快探索到高价值的分支。
 - **领域扩展**: 结合当前算法与玩家的落子策略和为了提高搜索效率，使用邻域算法来缩小蒙特卡洛树搜索在搜索过程中构建搜索树的广度，从而在减少模拟次数后达到相同甚至更智能的策略选择。
 - **回溯策略**: 将平局视为0.1胜场是一种对传统算法的改进尝试。这样的设置能够更平衡地考虑胜、平、负三种结果，有助于发现那些能够导致平局而非明确胜负的策略。平局信息的引入也可以加速收敛过程，因为搜索算法能够更快地识别出那些能够导致较好（包括平局）结果的策略。
-- 
